@@ -20,5 +20,5 @@ jobs:
       env:
         TEST_NAME: Scarlett
       with:
-        php_extensions:  php-build
+        configuration: test/phpunit.xml
         

@@ -15,10 +15,10 @@ jobs:
 
     - uses: php-actions/composer@v6
 
-    - name: Install GD extension
-      run: sudo apt-get install -y php-gd
-
-
-
     - name: PHPUnit Tests
       uses: php-actions/phpunit@master
+      env:
+        TEST_NAME: Scarlett
+      with:
+        php_extensions:  php-build
+        

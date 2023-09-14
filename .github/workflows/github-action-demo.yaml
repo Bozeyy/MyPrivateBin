@@ -21,5 +21,4 @@ jobs:
         TEST_NAME: Scarlett
       with:
         php_extensions: GD
-        bootstrap: vendor/autoload.php
         

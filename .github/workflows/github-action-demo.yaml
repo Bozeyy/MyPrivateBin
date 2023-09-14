@@ -31,3 +31,4 @@ jobs:
       uses: php-actions/phpunit@master
       with:
         args: --testdox
+

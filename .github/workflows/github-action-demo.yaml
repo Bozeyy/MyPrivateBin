@@ -11,15 +11,18 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
+    - uses: php-actions/composer@v6
+
+    - name: PHPUnit Tests
+      uses: php-actions/phpunit@master
+      env:
+          TEST_NAME: Scarlett
       with:
-        node-version: '14'
-
-    - name: Install Make
-      run: sudo apt-get update && sudo apt-get install make
+          bootstrap: vendor/autoload.php
+          configuration: test/phpunit.xml
+          args: --coverage-text
 
     - name: Run Make Test in WSL
       run: |

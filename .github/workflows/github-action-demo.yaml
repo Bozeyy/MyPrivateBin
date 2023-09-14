@@ -28,7 +28,7 @@ jobs:
         wsl --set-default Ubuntu-20.04  # Change to your WSL distribution if needed
 
         # Change directory to your project folder in WSL
-        cd Desktop/GIT/PrivateBin
+        cd mnt/C:/Desktop/GIT/PrivateBin
 
         # Run 'make test' command
         make test

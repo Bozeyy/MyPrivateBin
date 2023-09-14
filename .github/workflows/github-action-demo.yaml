@@ -24,14 +24,10 @@ jobs:
           configuration: test/phpunit.xml
           args: --coverage-text
 
-    - name: Run Make Test in WSL
-      run: |
-        # Configure WSL to use the default distribution
-        wsl --set-default-version 2
-        wsl --set-default Ubuntu-20.04  # Change to your WSL distribution if needed
+    - name: Install Composer Dependencies
+      run: composer install
 
-        # Change directory to your project folder in WSL
-        cd mnt/C/Desktop/GIT/PrivateBin
-
-        # Run 'make test' command
-        make test
+    - name: Run PHPUnit Tests
+      uses: php-actions/phpunit@master
+      with:
+        args: --testdox

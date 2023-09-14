@@ -15,5 +15,9 @@ jobs:
 
     - uses: php-actions/composer@v6
 
+    - name: Install GD extension
+      run: sudo apt-get install -y php8.2-gd
+
+
     - name: PHPUnit Tests
       uses: php-actions/phpunit@master

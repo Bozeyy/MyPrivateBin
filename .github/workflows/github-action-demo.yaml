@@ -20,5 +20,5 @@ jobs:
       env:
         TEST_NAME: Scarlett
       with:
-        configuration: test/phpunit.xml
+        php_extensions: GD
         

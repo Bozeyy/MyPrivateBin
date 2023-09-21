@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: Test on Push to Main
 
 on:
@@ -32,3 +33,30 @@ jobs:
       with:
         args: --testdox
 
+=======
+name: Test on Push to Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - uses: php-actions/composer@v6
+
+    - name: PHPUnit Tests
+      uses: php-actions/phpunit@master
+      env:
+        TEST_NAME: Scarlett
+      with:
+        php_extensions: GD
+        bootstrap: vendor/autoload.php
+        
+>>>>>>> 95716c571ed50b1f2f9420f5c669fbb79fc19819

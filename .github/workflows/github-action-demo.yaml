@@ -29,6 +29,8 @@ jobs:
       uses: irongut/CodeCoverageSummary@v1.3.0
       with:
         filename: coverage.xml
+        format: markdown 
+        output: file
     
     - name: Adding markdown
       run: echo 'code-coverage-results.md' >> $GITHUB_STEP_SUMMARY
